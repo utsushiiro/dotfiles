@@ -1,0 +1,18 @@
+export CLICOLOR=1
+alias ls='ls -G -F'
+alias pwd='pwd | tee >(pbcopy)'
+alias h="history | grep"
+
+# cd
+alias cdd='cd ~/Desktop'
+alias cdc='cd `pbpaste`'
+
+# Sublime
+alias sl="subl"
+
+# open
+  alias finder="open ."
+
+# jupyter
+  alias note='jupyter notebook'
+  alias qtc='jupyter qtconsole'
