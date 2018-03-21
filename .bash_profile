@@ -104,7 +104,7 @@ export PATH=$HOME/.composer/vendor/bin:$PATH
 
 # for java
 if which /usr/libexec/java_home > /dev/null; then
-  export JAVA_HOME=`/usr/libexec/java_home -v 9`
+  export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 fi
 
 # load .bashrc
