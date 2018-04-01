@@ -8,3 +8,6 @@
     	ln -s -v  $HOME/dotfiles/$file $HOME/$file
     fi
  done
+
+mkdir -p $HOME/.config/git
+ln -s -v  $HOME/dotfiles/ignore $HOME/.config/git/ignore
