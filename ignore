@@ -29,3 +29,7 @@ Temporary Items
 # Jetbrains
 /.idea/
 *.iml
+
+
+# VisualStudioCode
+.vscode/*
