@@ -94,6 +94,9 @@ bash_version() {
 # for nodenv
   if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
+# for direnv
+  if which direnv > /dev/null; then eval "$(direnv hook bash)"; fi
+
 # for composer
 export PATH=$HOME/.composer/vendor/bin:$PATH
 
