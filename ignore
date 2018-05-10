@@ -33,3 +33,7 @@ Temporary Items
 
 # VisualStudioCode
 .vscode/*
+
+
+# direnv
+.envrc
