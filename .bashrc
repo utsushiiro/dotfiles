@@ -7,12 +7,14 @@ alias dec2hex="printf '%x\n'"
 
 alias gis='git status'
 alias gil='git log'
+alias gib='git branch'
 alias gick='git checkout'
 alias gia='git add'
 alias gia.='git add .'
 alias gic='git commit'
 alias gicm='git commit -m'
-alias gip='git push'
+alias giph='git push'
+alias gipl='git pull'
 
 case ${OSTYPE} in
   darwin*)
