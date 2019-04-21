@@ -9,11 +9,12 @@ files_exist?() {
     return 0
 }
 
-bash_version() {
+get_bash_version() {
   echo `bash --version | head -n1 | grep --o "[0-9]*\.[0-9]*\.[0-9]*" | head -n1`
 }
 
 # bash options
+  bash_version=`get_bash_version`
   if [[ ${bash_version:0:1} = "4"  || ${bash_version:0:1} > "4" ]]; then
     shopt -s autocd 1>/dev/null 2>/dev/null
     shopt -s globstar 1>/dev/null 2>/dev/null
