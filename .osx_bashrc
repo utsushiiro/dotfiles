@@ -1,5 +1,17 @@
 export CLICOLOR=1
-alias ls='ls -G -F'
+
+# ls
+if which lsd > /dev/null; then
+  alias ls='lsd'
+else 
+  alias ls='ls -G -F'
+fi
+
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
 alias pwd='pwd | tee >(pbcopy)'
 alias h="history | grep"
 
