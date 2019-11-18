@@ -62,7 +62,7 @@ get_bash_version() {
   shopt -s histappend
 
 # default editor
-  if which subl > /dev/null;
+  if which subl > /dev/null 2>&1;
     then
       export EDITOR='subl -w'
     else
@@ -83,20 +83,20 @@ get_bash_version() {
   export PATH=/Applications/MAMP/bin/php/php7.1.1/bin:$PATH
 
 # for rbenv
-  if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+  if which rbenv > /dev/null 2>&1; then eval "$(rbenv init -)"; fi
 
 # for pyenv
-  if which pyenv > /dev/null; then
+  if which pyenv > /dev/null 2>&1; then
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)";
   fi
 
 # for nodenv
-  if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
+  if which nodenv > /dev/null 2>&1; then eval "$(nodenv init -)"; fi
 
 # for direnv
-  if which direnv > /dev/null; then eval "$(direnv hook bash)"; fi
+  if which direnv > /dev/null 2>&1; then eval "$(direnv hook bash)"; fi
 
 # for composer
 export PATH=$HOME/.composer/vendor/bin:$PATH
@@ -107,7 +107,7 @@ export PATH=$HOME/.composer/vendor/bin:$PATH
   fi
 
 # for java
-if which /usr/libexec/java_home > /dev/null; then
+if which /usr/libexec/java_home > /dev/null 2>&1; then
   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 fi
 
@@ -137,6 +137,6 @@ fi
   fi
 
 # mysql5.7 by homebrew
-if ! which mysql > /dev/null && [ -e /usr/local/opt/mysql@5.7/bin/mysql ]; then
+if ! which mysql > /dev/null 2>&1 && [ -e /usr/local/opt/mysql@5.7/bin/mysql ]; then
   export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 fi

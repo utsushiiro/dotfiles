@@ -1,7 +1,7 @@
 export CLICOLOR=1
 
 # ls
-if which lsd > /dev/null; then
+if which lsd > /dev/null 2>&1; then
   alias ls='lsd'
 else 
   alias ls='ls -G -F'
