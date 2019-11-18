@@ -135,3 +135,8 @@ fi
   if [ -f ~/.api ]; then
     source ~/.api
   fi
+
+# mysql5.7 by homebrew
+if ! which mysql > /dev/null && [ -e /usr/local/opt/mysql@5.7/bin/mysql ]; then
+  export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+fi
