@@ -18,11 +18,15 @@ alias gipl='git pull'
 
 case ${OSTYPE} in
   darwin*)
-    if [ -f ~/.osx_bashrc ]; then
-      source ~/.osx_bashrc
+    if [ -f ~/.osx.bashrc ]; then
+      source ~/.osx.bashrc
     fi ;;
   linux*)
-    if [ -f ~/.linux_bashrc ]; then
-      source ~/.linux_bashrc
+    if [ -f ~/.linux.bashrc ]; then
+      source ~/.linux.bashrc
     fi ;;
 esac
+
+if [ -f ~/.overwrite.bashrc ]; then
+  source ~/.overwrite.bashrc
+fi
