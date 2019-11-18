@@ -28,3 +28,8 @@ alias sl="subl"
 # jupyter
   alias note='jupyter notebook'
   alias qtc='jupyter qtconsole'
+
+# iTerm2
+function it() { 
+  echo -ne "\033]0;$(pwd | rev | awk -F \/ '{print $1}'| rev)\007"
+}
