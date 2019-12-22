@@ -16,6 +16,9 @@ alias gicm='git commit -m'
 alias giph='git push'
 alias gipl='git pull'
 
+alias k='kubectl'
+alias kn='kubens'
+
 case ${OSTYPE} in
   darwin*)
     if [ -f ~/.osx.bashrc ]; then
