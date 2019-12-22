@@ -1,5 +1,5 @@
 # functions used in this file
-files_exist?() {
+function files_exist? {
     for f in $*
     do
       if [ ! -f $f ]; then
@@ -9,7 +9,7 @@ files_exist?() {
     return 0
 }
 
-get_bash_version() {
+function get_bash_version {
   echo `bash --version | head -n1 | grep --o "[0-9]*\.[0-9]*\.[0-9]*" | head -n1`
 }
 
