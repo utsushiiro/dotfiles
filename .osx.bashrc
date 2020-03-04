@@ -6,14 +6,12 @@ if which lsd > /dev/null 2>&1; then
 else 
   alias ls='ls -G -F'
 fi
-
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
 alias pwd='pwd | tee >(pbcopy)'
-alias h="history | grep"
 
 # cd
 alias cdd='cd ~/Desktop'

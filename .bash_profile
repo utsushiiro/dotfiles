@@ -111,6 +111,12 @@ if which /usr/libexec/java_home > /dev/null 2>&1; then
   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 fi
 
+# Go
+if which go > /dev/null 2>&1; then
+    export GOPATH=$HOME/.go
+    export PATH=$PATH:$GOPATH/bin
+fi
+
 # load .bashrc
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc

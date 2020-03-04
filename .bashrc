@@ -16,6 +16,9 @@ alias gicm='git commit -m'
 alias giph='git push'
 alias gipl='git pull'
 
+alias h="history | grep"
+
+# k8s
 alias k='kubectl'
 alias kn='kubens'
 
