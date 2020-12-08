@@ -50,16 +50,18 @@ if [ $(id -u) -eq 0 ];
 fi
 
 ### history config ###
-# historyに重複したコマンドを記録しない
+shopt -u histappend
 HISTCONTROL=ignoreboth
-# history関連は記録しない。
 HISTIGNORE=*history*:*his*
-# 現在のセッションで利用しているhistoryの履歴数を定義する
 HISTSIZE=5000
-# .bash_historyで記録する履歴数を定義する
 HISTFILESIZE=5000
-# .bash_historyへの記録方式を追記にする
-shopt -s histappend
+
+function sync_history {
+  history -a
+  history -c
+  history -r
+}
+PROMPT_COMMAND='sync_history'
 
 # default editor
 if which subl > /dev/null 2>&1;
@@ -91,6 +93,9 @@ if which pyenv > /dev/null 2>&1; then
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)";
 fi
+
+# poetry
+export PATH="$HOME/.poetry/bin:$PATH"
 
 # for nodenv
 if which nodenv > /dev/null 2>&1; then eval "$(nodenv init -)"; fi
